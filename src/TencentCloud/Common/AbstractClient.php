@@ -703,7 +703,6 @@ abstract class AbstractClient
     private function getPrivateMethod($obj, $methodName) {
         $objReflectClass = new ReflectionClass(get_class($obj));
         $method = $objReflectClass->getMethod($methodName);
-        $method->setAccessible(true);
         return $method;
     }
 

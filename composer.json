@@ -1,24 +1,34 @@
 {
-    "name": "tencentcloud/common",
-    "description": "TencentCloudApi php sdk",
-    "type": "library",
-    "homepage": "https://github.com/tencentcloud-sdk-php/common",
-    "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "tencentcloudapi",
-            "email": "tencentcloudapi@tencent.com",
-            "homepage": "https://cloud.tencent.com/document/sdk/PHP",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=5.6.0",
-        "guzzlehttp/guzzle": "^6.3||^7.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "TencentCloud\\": "./src/TencentCloud"
-        }
+  "name": "teamones/tencentcloud-common",
+  "description": "TencentCloudApi php sdk",
+  "type": "library",
+  "homepage": "https://github.com/teamones-open/tencentcloud-common",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "tencentcloudapi",
+      "email": "tencentcloudapi@tencent.com",
+      "homepage": "https://cloud.tencent.com/document/sdk/PHP",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "guzzlehttp/guzzle": "^6.3||^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TencentCloud\\": "./src/TencentCloud"
+    }
+  },
+  "replace": {
+    "tencentcloud/common": "3.0.1687"
+  },
+  "scripts": {
+    "test": "@php tests/strict.php"
+  },
+  "require-dev": {
+    "tencentcloud/kms": "^3.0",
+    "tencentcloud/vms": "^3.0"
+  }
 }
