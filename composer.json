@@ -25,7 +25,10 @@
     "tencentcloud/common": "3.0.1687"
   },
   "scripts": {
-    "test": "@php tests/strict.php"
+    "test": [
+      "@php tests/strict.php",
+      "@php tests/common-client.php"
+    ]
   },
   "require-dev": {
     "tencentcloud/kms": "^3.0",

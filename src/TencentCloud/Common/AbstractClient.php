@@ -499,7 +499,7 @@ abstract class AbstractClient
         $headers["Host"] = $endpoint;
         $headers["X-TC-Action"] = ucfirst($action);
         $headers["X-TC-RequestClient"] = $this->sdkVersion;
-        $headers["X-TC-Timestamp"] = time();
+        $headers["X-TC-Timestamp"] = (string) time();
         $headers["X-TC-Version"] = $this->apiVersion;
 
         if ($this->region) {
